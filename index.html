@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twin's Cafe - Billing System</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>🧾 Twin's Cafe Billing</h1>
+
+  <div class="container">
+    <div class="card" id="step1">
+      <h2>Enter Customer Details</h2>
+      <input type="text" id="customerName" placeholder="Your Name" required />
+      <input type="tel" id="mobileNumber" placeholder="Mobile Number" required />
+      <button onclick="goToMenu()">Next ➡️</button>
+    </div>
+
+    <div class="card hidden" id="step2">
+      <h2>🧾 Menu</h2>
+      <div id="menuItems"></div>
+      <button onclick="goToBill()">Proceed to Bill 🧾</button>
+    </div>
+
+    <div class="card hidden" id="step3">
+      <h2>Final Bill</h2>
+      <div id="billOutput"></div>
+      <button onclick="downloadBill()">⬇️ Download Bill</button>
+      <button onclick="showFeedback()">Give Feedback 📝</button>
+    </div>
+
+    <div class="card hidden" id="step4">
+      <h2>💬 Your Feedback</h2>
+      <textarea id="feedbackText" rows="5" placeholder="Share your experience..."></textarea>
+      <button onclick="submitFeedback()">Submit Feedback</button>
+    </div>
+  </div>
+</body>
+</html>
